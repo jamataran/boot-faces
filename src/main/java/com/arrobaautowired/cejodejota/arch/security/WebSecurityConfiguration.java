@@ -1,5 +1,6 @@
-package com.arrobaautowired.cejodejota;
+package com.arrobaautowired.cejodejota.arch.security;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -15,8 +16,11 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  */
 @EnableWebSecurity
 @Configuration
-@Order(100)
+@Order(0)
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Value("${spring.h2.console.path}")
+    private String consolePath;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -28,6 +32,14 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //H2-PERMITIDO
+        http.authorizeRequests()
+                .antMatchers(consolePath.concat(("/**")))
+                .permitAll();
+        http.csrf().disable();
+
+        http.headers().frameOptions().disable();
+
         http
                 .csrf().disable()
                 .formLogin()
@@ -42,7 +54,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatcher("/**")
                 .authorizeRequests().anyRequest().fullyAuthenticated();
 
-        http.headers().frameOptions().disable();
+
 
 
     }

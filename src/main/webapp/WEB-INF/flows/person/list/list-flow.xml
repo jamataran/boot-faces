@@ -3,11 +3,11 @@
       xmlns="http://www.springframework.org/schema/webflow"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow.xsd">
 
-    <view-state id="list">
+    <view-state id="list" view="">
         <transition on="create" to="toCreatePerson"/>
     </view-state>
 
-    <subflow-state id="toCreatePerson" subflow="create-flow">
+    <subflow-state id="toCreatePerson" subflow="person/create-flow">
         <transition on="back" to="list"/>
     </subflow-state>
 

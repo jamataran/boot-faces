@@ -17,17 +17,3 @@ This demo covers:
 * JSF and Primefaces
 * Spring/JSF interop (SpringBeanFacesELResolver)
 * Jackson Repository Populators
-
-You can find more information about this demo on my website at: [Spring Boot with JSF/Primefaces](http://www.oakdalesoft.com/2015/03/spring-boot-with-jsfprimefaces/)
-
----
-
-### Update
-
-
-> Added OcpSoft Rewrite to the project, this rewrites the JSF URL schema to look clean and modern without file extensions. Note that Omnifaces doesn't work with Spring Boot.
-
-### Base de datos
-
-Para acceder a la base de datos, debemos acceder:
-[]

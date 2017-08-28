@@ -1,4 +1,4 @@
-package com.arrobaautowired.cejodejota;
+package com.arrobaautowired.cejodejota.arch.webflow;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

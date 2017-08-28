@@ -5,9 +5,9 @@
 
     <var name="personForm" class="spring.workshop.webflow.beans.PersonFormBean"/>
 
-    <on-start>
-        <evaluate expression="personController.createNewPersonFormBean()" result="personForm"/>
-    </on-start>
+    <!--    <on-start>
+            <evaluate expression="personController.createNewPersonFormBean()" result="personForm"/>
+        </on-start>-->
 
     <view-state id="create" model="personForm">
         <transition on="save" to="saveAction"/>
