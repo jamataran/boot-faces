@@ -1,6 +1,4 @@
-package com.oakdalesoft.bootfaces;
-
-import java.util.EnumSet;
+package com.arrobaautowired.cejodejota;
 
 import org.ocpsoft.rewrite.servlet.RewriteFilter;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,20 +10,17 @@ import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.PathResource;
-import org.springframework.core.io.Resource;
-import org.springframework.data.repository.init.Jackson2RepositoryPopulatorFactoryBean;
 
 import javax.faces.webapp.FacesServlet;
 import javax.servlet.DispatcherType;
+import java.util.EnumSet;
 
 /**
  * Created by Alex on 28/02/2015.
  */
 
 @EnableAutoConfiguration
-@ComponentScan({"com.oakdalesoft.bootfaces"})
+@ComponentScan({"com.arrobaautowired.cejodejota"})
 public class Application extends SpringBootServletInitializer {
 	
 	@Value("${init.json}")
@@ -56,7 +51,7 @@ public class Application extends SpringBootServletInitializer {
         return rwFilter;
     }
     
-    @Bean
+    /*@Bean
     public Jackson2RepositoryPopulatorFactoryBean repositoryPopulator() {
     	Resource sourceData;
     	Jackson2RepositoryPopulatorFactoryBean factory;
@@ -71,6 +66,6 @@ public class Application extends SpringBootServletInitializer {
 		}
 
 		return factory;
-    }
+    }*/
 
 }

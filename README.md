@@ -1,4 +1,4 @@
-# boot-faces
+# cejodejota
 ## Spring Boot, JSF Primefaces demo
 
 ### Purpose
@@ -24,4 +24,10 @@ You can find more information about this demo on my website at: [Spring Boot wit
 
 ### Update
 
+
 > Added OcpSoft Rewrite to the project, this rewrites the JSF URL schema to look clean and modern without file extensions. Note that Omnifaces doesn't work with Spring Boot.
+
+### Base de datos
+
+Para acceder a la base de datos, debemos acceder:
+[]
